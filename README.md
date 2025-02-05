@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este projeto implementa um **sistema de temporização para acionamento de LEDs** utilizando um **botão (pushbutton)**. O sistema é desenvolvido para o microcontrolador **Raspberry Pi Pico W** e utiliza a função `add_alarm_in_ms()` do Pico SDK para controlar os estados dos LEDs.
+Este projeto implementa um **sistema de temporização para acionamento de LEDs** utilizando um **botão (pushbutton)**. O sistema é desenvolvido para o microcontrolador **Raspberry Pi Pico W** e utiliza a função **`add_alarm_in_ms()`** do Pico SDK para controlar os estados dos LEDs.
 
 ---
 
@@ -50,21 +50,21 @@ Este projeto implementa um **sistema de temporização para acionamento de LEDs*
    - Após mais **3 segundos**, **todos os LEDs** são desligados.
 
 2. **Restrição do Botão:**
-   - O **botão só pode iniciar uma nova sequência** quando todos os LEDs estiverem desligados.
-   - Durante a execução da sequência (LEDs acesos), o botão **não tem efeito**.
+   - O botão só pode iniciar uma nova sequência quando todos os LEDs estiverem desligados.
+   - Durante a execução da sequência (LEDs acesos), o botão não tem efeito.
 
 ---
 
 ## Temporizador:
 
 - O **temporizador** é ajustado para um atraso de **3 segundos (3000 ms)** entre cada mudança de estado dos LEDs.
-- A mudança de estado dos LEDs é renovada em uma função de retorno de chamada chamada `turn_off_callback()`.
+- A mudança de estado dos LEDs é renovada em uma função de retorno de chamada chamada **`turn_off_callback()`**.
 
 ---
 
 ## Simulação no Wokwi
 
-- O projeto já está implementado e pronto para ser **compilado e rodado no simulador Wokwi**. Não é necessário fazer configurações adicionais para testar.
+- O projeto já está implementado e pronto para ser compilado e rodado no **simulador Wokwi**. Não é necessário fazer configurações adicionais para testar.
 
 ---
 
@@ -88,7 +88,7 @@ O código-fonte completo está disponível no repositório. Ele inclui funções
 
 ## Licença
 
-Este programa foi desenvolvido como um **exemplo educacional** e pode ser usado gratuitamente para **fins de estudo e aprendizagem**.
+Este programa foi desenvolvido como um exemplo educacional e pode ser usado gratuitamente para fins de estudo e aprendizagem.
 
 ---
 
