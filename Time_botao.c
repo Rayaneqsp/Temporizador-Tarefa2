@@ -1,6 +1,6 @@
-#include <stdio.h>         
-#include "pico/stdlib.h"    
-#include "pico/time.h"      
+#include <stdio.h>          // Biblioteca padrão do C.
+#include "pico/stdlib.h"    // Biblioteca padrão do Raspberry Pi Pico para controle de GPIO e temporização.
+#include "pico/time.h"      // Biblioteca para gerenciamento de temporizadores e alarmes.
 
 // Definição dos pinos dos LEDs e do botão
 #define LED_BLUE_PIN 11     // Pino GPIO 11 para o LED azul.
