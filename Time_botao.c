@@ -1,6 +1,6 @@
-#include <stdio.h>          // Biblioteca padrão do C.
-#include "pico/stdlib.h"    // Biblioteca padrão do Raspberry Pi Pico para controle de GPIO e temporização.
-#include "pico/time.h"      // Biblioteca para gerenciamento de temporizadores e alarmes.
+#include <stdio.h>         
+#include "pico/stdlib.h"    
+#include "pico/time.h"      
 
 // Definição dos pinos dos LEDs e do botão
 #define LED_BLUE_PIN 11     // Pino GPIO 11 para o LED azul.
@@ -66,14 +66,14 @@ void update_leds() {
 int64_t turn_off_callback(alarm_id_t id, void *user_data) {
     switch (currentState) {
         case ALL_LEDS_ON:
-            currentState = TWO_LEDS_ON;  // Muda para o estado TWO_LEDS_ON.
+            currentState = TWO_LEDS_ON;  
             break;
         case TWO_LEDS_ON:
-            currentState = ONE_LED_ON;   // Muda para o estado ONE_LED_ON.
+            currentState = ONE_LED_ON;   
             break;
         case ONE_LED_ON:
-            currentState = ALL_LEDS_OFF; // Muda para o estado ALL_LEDS_OFF.
-            timerActive = false;         // Desativa o temporizador.
+            currentState = ALL_LEDS_OFF; 
+            timerActive = false;         
             break;
         default:
             break;
@@ -111,11 +111,11 @@ int main() {
 
         // Verifica se o botão foi solto
         if (gpio_get(BUTTON_PIN) == 1) {
-            buttonPressed = false;  // Marca o botão como não pressionado.
+            buttonPressed = false;  
         }
 
         sleep_ms(10);  // Pequena pausa para reduzir o uso da CPU.
     }
 
-    return 0;  // Retorno padrão (nunca será alcançado devido ao loop infinito).
+    return 0;  
 }
