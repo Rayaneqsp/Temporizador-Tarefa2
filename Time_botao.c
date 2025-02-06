@@ -45,14 +45,14 @@ void update_leds() {
             gpio_put(LED_GREEN_PIN, 1);
             break;
         case TWO_LEDS_ON:
-            gpio_put(LED_BLUE_PIN, 0);
+            gpio_put(LED_BLUE_PIN, 1);
             gpio_put(LED_RED_PIN, 1);
-            gpio_put(LED_GREEN_PIN, 1);
+            gpio_put(LED_GREEN_PIN, 0);
             break;
         case ONE_LED_ON:
             gpio_put(LED_BLUE_PIN, 0);
-            gpio_put(LED_RED_PIN, 0);
-            gpio_put(LED_GREEN_PIN, 1);
+            gpio_put(LED_RED_PIN, 1);
+            gpio_put(LED_GREEN_PIN, 0);
             break;
         case ALL_LEDS_OFF:
             gpio_put(LED_BLUE_PIN, 0);
