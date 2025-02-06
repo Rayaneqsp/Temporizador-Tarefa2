@@ -1,11 +1,11 @@
-#include <stdio.h>          // Biblioteca padrão do C.
-#include "pico/stdlib.h"    // Biblioteca padrão do Raspberry Pi Pico para controle de GPIO e temporização.
+#include <stdio.h>          
+#include "pico/stdlib.h"    
 #include "pico/time.h"      // Biblioteca para gerenciamento de temporizadores e alarmes.
 
 // Definição dos pinos dos LEDs e do botão
-#define LED_BLUE_PIN 11     // Pino GPIO 11 para o LED azul.
-#define LED_RED_PIN 12      // Pino GPIO 12 para o LED vermelho.
-#define LED_GREEN_PIN 13    // Pino GPIO 13 para o LED verde.
+#define LED_GREEN_PIN 11    // Pino GPIO 11 para o LED verde.
+#define LED_BLUE_PIN 12     // Pino GPIO 12 para o LED azul.
+#define LED_RED_PIN 13     // Pino GPIO 13 para o LED vermelho.
 #define BUTTON_PIN 5        // Pino GPIO 5 para o botão.
 
 // Estados dos LEDs
@@ -86,12 +86,12 @@ int64_t turn_off_callback(alarm_id_t id, void *user_data) {
         add_alarm_in_ms(3000, turn_off_callback, NULL, false);
     }
 
-    return 0;  // Retorna 0 para indicar que o alarme não deve se repetir automaticamente.
+    return 0;  
 }
 
 // Função principal
 int main() {
-    stdio_init_all();  // Inicializa a comunicação serial (para depuração, se necessário).
+    stdio_init_all();  
     setup_pins();      // Configura os pinos dos LEDs e do botão.
 
     while (true) {
@@ -114,7 +114,7 @@ int main() {
             buttonPressed = false;  
         }
 
-        sleep_ms(10);  // Pequena pausa para reduzir o uso da CPU.
+        sleep_ms(10); 
     }
 
     return 0;  
