@@ -25,9 +25,9 @@ Conecte os componentes ao Raspberry Pi Pico W em um simulador Wokwi conforme a t
 
 | Componente  | Pino GPIO no Pico W |
 |-------------|---------------------|
-| LED Azul    | GPIO 11             |
-| LED Vermelho| GPIO 12             |
-| LED Verde   | GPIO 13             |
+| LED Azul    | GPIO 12             |
+| LED Vermelho| GPIO 13             |
+| LED Verde   | GPIO 11             |
 | Botão       | GPIO 5              |
 
 ### Observações:
